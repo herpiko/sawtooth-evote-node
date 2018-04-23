@@ -1,0 +1,3 @@
+[submodule "transaction-processors"]
+	path = transaction-processors
+	url = https://github.com/herpiko/sawtooth-evote-transaction-processor
