@@ -1,3 +1,6 @@
 [submodule "transaction-processors"]
 	path = transaction-processors
 	url = https://github.com/herpiko/sawtooth-evote-transaction-processor
+[submodule "client"]
+	path = client
+	url = git@github.com:herpiko/sawtooth-evote-submitter.git
