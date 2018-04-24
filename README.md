@@ -4,8 +4,8 @@
 
 ### Requirements
 
-- Sawtooth
-- NodeJS LTS
+- Sawtooth v1.0.2
+- NodeJS LTS v8.11.1
 
 ### Standalone
 
