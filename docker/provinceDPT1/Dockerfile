@@ -23,7 +23,7 @@ RUN mkdir -p /tmp/sawtooth-logs
 RUN echo "sawtooth-rest-api -v --connect tcp://127.0.0.1:4004 --bind 0.0.0.0:8008 & \
 sawtooth-validator -vv --endpoint tcp://0.0.0.0:8800 --bind component:tcp://0.0.0.0:4004 --bind network:tcp://0.0.0.0:8800 --peers tcp://tps2:8800 --scheduler serial >> /tmp/sawtooth-logs/validator.log & \
 settings-tp -v --connect tcp://127.0.0.1:4004 & \
-cd tp && node index.js localVote tcp://127.0.0.1:4004" >> /bin/ledger
+cd tp && node index.js provinceDPT tcp://127.0.0.1:4004" >> /bin/ledger
 RUN chmod +x /bin/ledger
 
 CMD ["bash", "-c", "/bin/ledger"]
