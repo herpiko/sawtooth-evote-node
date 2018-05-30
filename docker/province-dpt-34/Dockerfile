@@ -21,6 +21,7 @@ RUN echo "sawtooth-validator -vv \
 --bind component:tcp://172.20.0.34:11234  \
 --bind network:tcp://172.20.0.34:11134 \
 --peers tcp://172.20.0.52:11152 \
+--peers tcp://172.20.0.91:11191 \
 --scheduler serial >> /tmp/sawtooth-logs/validator.log & \
 settings-tp -v \
 --connect tcp://172.20.0.34:11234 >> /tmp/sawtooth-logs/settings-tp.log & \
