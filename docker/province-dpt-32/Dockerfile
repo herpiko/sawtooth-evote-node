@@ -17,19 +17,19 @@ RUN cd tp && npm install
 RUN mkdir -p /tmp/sawtooth-logs
 
 RUN echo "sawtooth-validator -vv \
---endpoint tcp://172.20.0.34:11134  \
---bind component:tcp://172.20.0.34:11234  \
---bind network:tcp://172.20.0.34:11134 \
+--endpoint tcp://172.20.0.32:11132  \
+--bind component:tcp://172.20.0.32:11232  \
+--bind network:tcp://172.20.0.32:11132 \
 --peers tcp://172.20.0.52:11152 \
 --peers tcp://172.20.0.91:11191 \
 --scheduler serial >> /tmp/sawtooth-logs/validator.log & \
 settings-tp -v \
---connect tcp://172.20.0.34:11234 >> /tmp/sawtooth-logs/settings-tp.log & \
+--connect tcp://172.20.0.32:11232 >> /tmp/sawtooth-logs/settings-tp.log & \
 sawtooth-rest-api -v \
---connect tcp://172.20.0.34:11234 \
---bind 172.20.0.34:11334 & \
+--connect tcp://172.20.0.32:11232 \
+--bind 172.20.0.32:11332 & \
 cd tp && \
-node index.js provinceDPT tcp://172.20.0.34:11234" >> /bin/ledger
+node index.js provinceDPT tcp://172.20.0.32:11232" >> /bin/ledger
 
 RUN chmod +x /bin/ledger
 CMD ["bash", "-c", "/bin/ledger"]
