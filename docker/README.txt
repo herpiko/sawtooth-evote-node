@@ -1,4 +1,4 @@
-Please follow this port pattern :
+Please follow this port number pattern :
 
 1 - ledger by network : national(1), local(2)
 1 - ledger by tp family : dpt(1), vote(2)
