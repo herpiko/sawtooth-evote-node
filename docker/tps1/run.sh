@@ -12,5 +12,4 @@ docker rm $(docker ps -a | grep skripsi.local | grep tps-1 | cut -d' ' -f 1);
 (cd machine3 && cd vote && ./run.sh)
 
 # Deploy the DPT data from national DPT ledger
-
-
+(cd ../../../sawtooth-evote-submitter && node tps-importer.js)
