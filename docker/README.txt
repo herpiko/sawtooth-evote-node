@@ -1,6 +1,8 @@
-### Please follow this port number pattern
+### IP and Port pattern
 
 #### National
+
+Port :
 
 1 - ledger by network : national(1)
 1 - ledger by tp family : dpt(1), vote(2)
@@ -10,11 +12,19 @@
 
 #### TPS
 
+Port :
+
 2 - ledger by network : local(2)
 1 - ledger by tp family : dpt(1), vote(2)
 1 - bind type : network(1), component(2), or restapi(3)
 1 - tpsId
 1 - instanceId
+
+IP :
+
+1 - ledger by tp family : dpt(1), vote(2)
+1 - tps id
+1 - machine id
 
 The ports used in a TPS that consists of 3 pairs of ledgers :
 
