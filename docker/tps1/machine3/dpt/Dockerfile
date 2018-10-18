@@ -28,7 +28,7 @@ sawtooth-rest-api -v \
 --connect tcp://172.30.0.113:21213 \
 --bind 172.30.0.113:21313 & \
 cd tp && \
-node index.js provinceDPT tcp://172.30.0.113:21213" >> /bin/ledger
+node index.js localDPT tcp://172.30.0.113:21213" >> /bin/ledger
 RUN chmod +x /bin/ledger
 
 CMD ["bash", "-c", "/bin/ledger"]

@@ -3,6 +3,8 @@
 #
 
 cp -fR ../../../../../sawtooth-evote-transaction-processor tp
-docker rm tps-1-dpt-1; docker build -t tps-1-dpt-1 .
+docker kill tps-1-dpt-1.skripsi.local;docker rm tps-1-dpt-1.skripsi.local; docker build -t tps-1-dpt-1.skripsi.local .
 rm -rf tp
-docker run -p 21311:21311 -p 21211:21211 --network tps1 --ip 172.30.0.111 --name tps-1-dpt-1 -ti tps-1-dpt-1
+docker create -p 21311:21311 -p 21211:21211 --network tps1 --ip 172.30.0.111 --name tps-1-dpt-1.skripsi.local -ti tps-1-dpt-1.skripsi.local;
+docker start tps-1-dpt-1.skripsi.local;
+docker network connect national tps-1-dpt-1.skripsi.local
