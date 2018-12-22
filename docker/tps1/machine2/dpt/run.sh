@@ -8,3 +8,7 @@ rm -rf tp
 docker create -p 21312:21312 -p 21212:21212 --network tps1 --ip 172.30.0.112 --name tps-1-dpt-2.skripsi.local -ti tps-1-dpt-2.skripsi.local;
 docker start tps-1-dpt-2.skripsi.local;
 docker network connect national tps-1-dpt-2.skripsi.local
+
+# Cockroach
+docker kill tps-1-db-2.skripsi.local;docker rm tps-1-db-2.skripsi.local;
+docker run -d --name=tps-1-db-2.skripsi.local --net=tps1 -p 23112:26257 cockroachdb/cockroach start --insecure --join=tps-1-db-1.skripsi.local

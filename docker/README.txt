@@ -32,19 +32,25 @@ The ports used in a TPS that consists of 3 pairs of ledgers :
   - TPS Machine 1
     - DPT : `21111`
     - Vote : `22111`
+    - Cockroach : `23111`
   - TPS Machine 2
     - DPT : `21112`
     - Vote : `22112`
+    - Cockroach : `23112`
   - TPS Machine 3
     - DPT : `21113`
     - Vote : `22113`
+    - Cockroach : `23113`
 - TPS 2 (network : tps2)
   - TPS Machine 1
     - DPT : `21121`
     - Vote : `22121`
+    - Cockroach : `23121`
   - TPS Machine 2
     - DPT : `21122`
     - Vote : `22122`
+    - Cockroach : `23122`
   - TPS Machine 3
     - DPT : `21123`
     - Vote : `22123`
+    - Cockroach : `23123`
