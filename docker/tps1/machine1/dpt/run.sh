@@ -16,5 +16,5 @@ docker run -d --name=tps-1-db-1.skripsi.local --net=tps1 -p 23111:26257 cockroac
 # Prepare db and table
 sleep 5
 docker exec -ti tps-1-db-1.skripsi.local /cockroach/cockroach sql --insecure -e "CREATE DATABASE dpt;"
-docker exec -ti tps-1-db-1.skripsi.local /cockroach/cockroach sql --insecure -e "CREATE TABLE dpt (id serial, value varchar(100000));;"
+docker exec -ti tps-1-db-1.skripsi.local /cockroach/cockroach sql --insecure -e "USE dpt;CREATE TABLE dpt (id serial, key varchar(100000), value varchar(100000));"
 
